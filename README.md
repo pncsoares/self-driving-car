@@ -2,11 +2,13 @@
 
 A self-driving car that uses neural networks and machine learning to move without colliding with other cars or objects.
 
+![app](./.github/app.png)
+
 # How to use
 
 Open the url: https://pncsoares.github.io/self-driving-car/src
 
-Then just click in the "Start driving" button and watch the car driving like a Tesla but without colliding to other vehicles or objects 😆~
+Then just click in the "Start driving" button and watch the car driving like a Tesla but without colliding to other vehicles or objects 😆
 
 # Checklist
 
