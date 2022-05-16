@@ -5,7 +5,7 @@ A self-driving car that uses neural networks and machine learning to move withou
 # Checklist
 
 - [x] Car driving mechanics
-- [ ] Road definition
+- [x] Road definition
 - [ ] Artificial sensors
 - [ ] Collision detection
 - [ ] Traffic simulation
