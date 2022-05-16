@@ -1,24 +1,10 @@
 # Self-driving Car
 
-
-## What I learned in the process
-
-- Car physics
-- Road generation
-- Sensors
-- Collision detection
-- Neural networks
-- Genetic algorithms
-
-# How to use
-
-Open the url: https://pncsoares.github.io/self-driving-car/src
-
-Then just click in the "Start driving" button and watch the car driving like a Tesla but without colliding to other vehicles or objects 😆
+A self-driving car that uses neural networks and machine learning to move without colliding with other cars or objects.
 
 # Checklist
 
-- [ ] Car driving mechanics
+- [x] Car driving mechanics
 - [ ] Road definition
 - [ ] Artificial sensors
 - [ ] Collision detection
