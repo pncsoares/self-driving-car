@@ -13,9 +13,9 @@ function lerp(A, B, t) {
 
 /**
  * Verify the intersection of two line segments
- * 
+ *
  * Fore more information, read [this article](https://blogs.sas.com/content/iml/2018/07/09/intersection-line-segments.html)
- * 
+ *
  * @param {*} A
  * @param {*} B
  * @param {*} C
@@ -40,4 +40,23 @@ function getIntersection(A, B, C, D) {
     }
 
     return null;
+}
+
+function polysIntersect(poly1, poly2) {
+    for (let p1 = 0; p1 < poly1.length; p1++) {
+        for (let p2 = 0; p2 < poly2.length; p2++) {
+            const touch = getIntersection(
+                poly1[p1],
+                poly1[(p1 + 1) % poly1.length],
+                poly2[p2],
+                poly2[(p2 + 1) % poly2.length]
+            );
+
+            if (touch) {
+                return true;
+            }
+        }
+    }
+
+    return false;
 }

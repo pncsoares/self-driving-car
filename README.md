@@ -16,7 +16,7 @@ Open the url: https://pncsoares.github.io/self-driving-car/src
 - [x] Car driving mechanics
 - [x] Road definition
 - [x] Artificial sensors
-- [ ] Collision detection
+- [x] Collision detection
 - [ ] Traffic simulation
 - [ ] Neural network
 - [ ] Visualizing neural networks
