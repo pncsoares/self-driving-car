@@ -8,7 +8,7 @@ A self-driving car that uses neural networks and machine learning to move withou
 
 Open the url: https://pncsoares.github.io/self-driving-car/src
 
-- [x] Move the car with the arrow keys
+- [x] Move the car with the arrow keys ⬆️➡️⬇️⬅️ 
 - [ ] Click the "Start driving" button and watch the car driving like a Tesla but without colliding to other vehicles or objects 😆
 
 # Checklist
