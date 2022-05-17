@@ -171,7 +171,7 @@ class Car {
                 this.height
             );
         }
-        
+
         context.globalCompositeOperation = 'multiply';
         context.drawImage(
             this.carImage,

@@ -31,3 +31,14 @@ button {
 button:hover {
     background: lightblue;
 }
+
+.dropdown {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2px;
+    border: none;
+    border-radius: 5px;
+    background: whitesmoke;
+    padding: 2px;
+}

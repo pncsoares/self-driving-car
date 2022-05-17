@@ -1,15 +1,20 @@
+document.getElementById('carCount').value =
+    localStorage.getItem('carCount') || 1;
+document.getElementById('mutationAmount').value =
+    localStorage.getItem('mutationAmount') || '0.5';
+
 const carCanvas = document.getElementById('carCanvas');
 carCanvas.width = 200;
 
 const networkCanvas = document.getElementById('networkCanvas');
-networkCanvas.width = 300;
+networkCanvas.width = 500;
 
 const carContext = carCanvas.getContext('2d');
 const networkContext = networkCanvas.getContext('2d');
 
 const road = new Road(carCanvas.width / 2, carCanvas.width * 0.9);
 
-const n = 100;
+const n = Number(document.getElementById('carCount').value);
 const cars = generateCars(n);
 let bestCar = cars[0];
 
@@ -19,16 +24,10 @@ if (localStorage.getItem('bestBrain')) {
         cars[i].brain = JSON.parse(theOne);
 
         if (i != 0) {
-            const rnd = Math.random();
-            let amount;
-
-            if (rnd == 0) {
-                amount = 0.1;
-            } else {
-                amount = 0.2;
-            }
-
-            NeuralNetwork.mutate(cars[i].brain, amount);
+            NeuralNetwork.mutate(
+                cars[i].brain,
+                Number(document.getElementById('mutationAmount').value)
+            );
         }
     }
 }
