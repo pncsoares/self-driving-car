@@ -6,15 +6,20 @@ Here is an example of the neural network passing with success all the cars on th
 
 ![neural network best brain](./.github/neural-network-best-brain.gif)
 
-# How to use
+# How to 
 
-Open the url: https://pncsoares.github.io/self-driving-car/src
+## Try
 
-- Watch the car driving like a Tesla but without colliding to other vehicles or walls 😆
+1. Open the url: https://pncsoares.github.io/self-driving-car/src
+1. Watch the car driving like a Tesla but without colliding to other vehicles or walls 😆
 
-⚠️ When you see a good car:
-1. Click the save button so the next generation inherit it's brain and mutate to the next generations
-2. Refresh the tab
+## Create better mutations
+
+1. Click the save button when you see a **_good car_*** so the next generation inherit it's brain and mutate to the next generations
+1. Refresh the tab
+1. Redo this steps as many as you want 💪
+
+> **_good car_** : the one that avoids more traffic and reaches the farthest distance
 
 # Checklist
 
