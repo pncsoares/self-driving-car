@@ -21,6 +21,8 @@ Here is an example of the neural network passing with success all the cars on th
 
 > **_good car_** : the one that avoids more traffic and reaches the farthest distance
 
+🧠 The more times you run, the better the AI becomes!
+
 # Checklist
 
 - [x] Car driving mechanics
