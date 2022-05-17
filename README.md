@@ -29,6 +29,7 @@ Open the url: https://pncsoares.github.io/self-driving-car/src
 - [x] Neural network
 - [x] Visualizing neural networks
 - [x] Parallelize AI
+- [x] Save best car's brain
 - [ ] Optimizing neural networks
 - [ ] Fine-tuning
 
