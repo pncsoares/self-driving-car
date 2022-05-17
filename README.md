@@ -2,7 +2,13 @@
 
 A self-driving car that uses neural networks and machine learning to move without colliding with other cars or objects.
 
-![neural network](./.github/neural-network.gif)
+Here is an example of the neural network breaking to avoid crashing the car in front 👇
+
+![neural network breaking](./.github/neural-network-break.gif)
+
+And here is another example of the neural network slowing down (releasing the accelerator) to avoid crashing the car in front 👇
+
+![neural network slowing down](./.github/neural-network-slow-down.gif)
 
 # How to use
 
