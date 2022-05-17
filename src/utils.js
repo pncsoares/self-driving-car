@@ -60,3 +60,12 @@ function polysIntersect(poly1, poly2) {
 
     return false;
 }
+
+function getRGBA(value) {
+    const R = value < 0 ? 0 : 255;
+    const G = R;
+    const B = value > 0 ? 0 : 255;
+    const alpha = Math.abs(value);
+
+    return 'rgba(' + R + ',' + G + ',' + B + ',' + alpha + ')';
+}

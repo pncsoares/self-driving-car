@@ -19,7 +19,7 @@ Open the url: https://pncsoares.github.io/self-driving-car/src
 - [x] Collision detection
 - [x] Traffic simulation
 - [x] Neural network
-- [ ] Visualizing neural networks
+- [x] Visualizing neural networks
 - [ ] Optimizing neural networks
 - [ ] Fine-tuning
 
