@@ -2,22 +2,19 @@
 
 A self-driving car that uses neural networks and machine learning to move without colliding with other cars or objects.
 
-Here is an example of the neural network breaking to avoid crashing the car in front 👇
+Here is an example of the neural network passing with success all the cars on the road without colliding 👇
 
-![neural network breaking](./.github/neural-network-break.gif)
-
-And here is another example of the neural network slowing down (releasing the accelerator) to avoid crashing the car in front 👇
-
-![neural network slowing down](./.github/neural-network-slow-down.gif)
+![neural network best brain](./.github/neural-network-best-brain.gif)
 
 # How to use
 
 Open the url: https://pncsoares.github.io/self-driving-car/src
 
-<s>- [x] Move the car with the arrow keys ⬆️➡️⬇️⬅️ ]</s>
-- [x] Refresh the page and watch the car driving like a Tesla but without colliding to other vehicles or walls 😆
+- Watch the car driving like a Tesla but without colliding to other vehicles or walls 😆
 
-⚠️ You'll need to refresh a few times because the neural network is randomized so try to find a generation that will move forward.
+⚠️ When you see a good car:
+1. Click the save button so the next generation inherit it's brain and mutate to the next generations
+2. Refresh the tab
 
 # Checklist
 
@@ -30,8 +27,8 @@ Open the url: https://pncsoares.github.io/self-driving-car/src
 - [x] Visualizing neural networks
 - [x] Parallelize AI
 - [x] Save best car's brain
-- [ ] Optimizing neural networks
-- [ ] Fine-tuning
+- [x] Genetic algorithm
+- [x] Mutation
 
 # Technologies
 

@@ -14,11 +14,25 @@ const cars = generateCars(n);
 let bestCar = cars[0];
 
 if (localStorage.getItem('bestBrain')) {
-    const theOne = localStorage.getItem('bestBrain');
-    bestCar.brain = JSON.parse(theOne);
+    for (let i = 0; i < cars.length; i++) {
+        const theOne = localStorage.getItem('bestBrain');
+        cars[i].brain = JSON.parse(theOne);
+
+        if (i != 0) {
+            NeuralNetwork.mutate(cars[i].brain, 0.1);
+        }
+    }
 }
 
-const traffic = [new Car(road.getLaneCenter(1), -100, 30, 50, 'DUMMY', 2)];
+const traffic = [
+    new Car(road.getLaneCenter(1), -100, 30, 50, 'DUMMY', 2),
+    new Car(road.getLaneCenter(0), -300, 30, 50, 'DUMMY', 2),
+    new Car(road.getLaneCenter(2), -300, 30, 50, 'DUMMY', 2),
+    new Car(road.getLaneCenter(0), -500, 30, 50, 'DUMMY', 2),
+    new Car(road.getLaneCenter(1), -500, 30, 50, 'DUMMY', 2),
+    new Car(road.getLaneCenter(1), -700, 30, 50, 'DUMMY', 2),
+    new Car(road.getLaneCenter(2), -700, 30, 50, 'DUMMY', 2),
+];
 
 animate();
 
@@ -86,5 +100,5 @@ function save() {
 }
 
 function discard() {
-    localStorage.setItem('bestBrain', JSON.stringify(bestCar.brain));
+    localStorage.removeItem('bestBrain');
 }
