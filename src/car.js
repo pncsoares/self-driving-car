@@ -1,5 +1,5 @@
 class Car {
-    constructor(x, y, width, height, type, maxSpeed = 3) {
+    constructor(x, y, width, height, type, maxSpeed = 3, color = 'blue') {
         this.x = x;
         this.y = y;
         this.width = width;
@@ -20,6 +20,23 @@ class Car {
         }
 
         this.controls = new Controls(type);
+
+        this.carImage = new Image();
+        this.carImage.src = '../assets/images/car.png';
+
+        this.mask = document.createElement('canvas');
+        this.mask.width = width;
+        this.mask.height = height;
+
+        const maskContext = this.mask.getContext('2d');
+        this.carImage.onload = () => {
+            maskContext.fillStyle = color;
+            maskContext.rect(0, 0, this.width, this.height);
+            maskContext.fill();
+
+            maskContext.globalCompositeOperation = 'destination-atop';
+            maskContext.drawImage(this.carImage, 0, 0, this.width, this.height);
+        };
     }
 
     update(roadBorders, traffic) {
@@ -136,24 +153,33 @@ class Car {
         return false;
     }
 
-    draw(context, color, drawSensor = false) {
-        if (this.damaged) {
-            context.fillStyle = 'gray';
-        } else {
-            context.fillStyle = color;
-        }
-
-        context.beginPath();
-        context.moveTo(this.polygon[0].x, this.polygon[0].y);
-
-        for (let i = 0; i < this.polygon.length; i++) {
-            context.lineTo(this.polygon[i].x, this.polygon[i].y);
-        }
-
-        context.fill();
-
+    draw(context, drawSensor = false) {
         if (this.sensor && drawSensor) {
             this.sensor.draw(context);
         }
+
+        context.save();
+        context.translate(this.x, this.y);
+        context.rotate(-this.angle);
+
+        if (!this.damaged) {
+            context.drawImage(
+                this.mask,
+                -this.width / 2,
+                -this.height / 2,
+                this.width,
+                this.height
+            );
+        }
+        
+        context.globalCompositeOperation = 'multiply';
+        context.drawImage(
+            this.carImage,
+            -this.width / 2,
+            -this.height / 2,
+            this.width,
+            this.height
+        );
+        context.restore();
     }
 }
