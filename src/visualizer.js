@@ -20,7 +20,7 @@ class Visualizer {
                 );
 
             context.setLineDash([7, 3]);
-            
+
             Visualizer.drawLevel(
                 context,
                 network.levels[i],
