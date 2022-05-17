@@ -17,6 +17,8 @@ Open the url: https://pncsoares.github.io/self-driving-car/src
 <s>- [x] Move the car with the arrow keys ⬆️➡️⬇️⬅️ ]</s>
 - [x] Refresh the page and watch the car driving like a Tesla but without colliding to other vehicles or walls 😆
 
+⚠️ You'll need to refresh a few times because the neural network is randomized so try to find a generation that will move forward.
+
 # Checklist
 
 - [x] Car driving mechanics
