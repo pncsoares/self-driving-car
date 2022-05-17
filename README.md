@@ -2,7 +2,7 @@
 
 A self-driving car that uses neural networks and machine learning to move without colliding with other cars or objects.
 
-![app](./.github/app.png)
+![neural network](./.github/neural-network.gif)
 
 # How to use
 
