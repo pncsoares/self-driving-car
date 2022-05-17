@@ -9,7 +9,7 @@ const networkContext = networkCanvas.getContext('2d');
 
 const road = new Road(carCanvas.width / 2, carCanvas.width * 0.9);
 
-const n = 100;
+const n = 1000;
 const cars = generateCars(n);
 let bestCar = cars[0];
 
@@ -19,7 +19,16 @@ if (localStorage.getItem('bestBrain')) {
         cars[i].brain = JSON.parse(theOne);
 
         if (i != 0) {
-            NeuralNetwork.mutate(cars[i].brain, 0.1);
+            const rnd = Math.random();
+            let amount;
+
+            if (rnd == 0) {
+                amount = 0.1;
+            } else {
+                amount = 0.2;
+            }
+
+            NeuralNetwork.mutate(cars[i].brain, amount);
         }
     }
 }
