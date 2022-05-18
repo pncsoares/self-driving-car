@@ -58,11 +58,11 @@ function generateCars(n) {
 function animate(time) {
     for (let i = 0; i < traffic.length; i++) {
         // sent empty because we don't want the traffic to interact with itself or with other traffic cars
-        traffic[i].update(road.borders, []);
+        traffic[i].update(road, []);
     }
 
     for (let i = 0; i < cars.length; i++) {
-        cars[i].update(road.borders, traffic);
+        cars[i].update(road, traffic);
     }
 
     bestCar = cars.find(

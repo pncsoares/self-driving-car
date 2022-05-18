@@ -39,16 +39,16 @@ class Car {
         };
     }
 
-    update(roadBorders, traffic) {
+    update(road, traffic) {
         if (!this.damaged) {
             this.#move();
 
             this.polygon = this.#createPolygon();
-            this.damaged = this.#assessDamage(roadBorders, traffic);
+            this.damaged = this.#assessDamage(road.borders, traffic);
         }
 
         if (this.sensor) {
-            this.sensor.update(roadBorders, traffic);
+            this.sensor.update(road.borders, traffic);
 
             const offsets = this.sensor.readings.map((s) =>
                 s == null ? 0 : 1 - s.offset
