@@ -106,7 +106,9 @@ function animate(time) {
 }
 
 function save() {
-    const isToSave = confirm("This will update the car's brain. Are you sure you want to do that?");
+    const isToSave = confirm(
+        "This will update the car's brain. Are you sure you want to do that?"
+    );
 
     if (isToSave) {
         localStorage.setItem('bestBrain', JSON.stringify(bestCar.brain));
@@ -114,7 +116,9 @@ function save() {
 }
 
 function discard() {
-    const isToDelete = confirm("This will update the car's brain. Are you sure you want to do that?");
+    const isToDelete = confirm(
+        "This will update the car's brain. Are you sure you want to do that?"
+    );
 
     if (isToDelete) {
         localStorage.removeItem('bestBrain');
