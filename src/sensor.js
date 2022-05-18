@@ -30,7 +30,7 @@ class Sensor {
                 lerp(
                     this.raySpread / 2,
                     -this.raySpread / 2,
-                    this.rayCount === 1 ? 0.5 : i / (this.rayCount - 1)
+                    this.rayCount == 1 ? 0.5 : i / (this.rayCount - 1)
                 ) + this.car.angle;
 
             const start = { x: this.car.x, y: this.car.y };
@@ -75,12 +75,12 @@ class Sensor {
             }
         }
 
-        if (touches.length === 0) {
+        if (touches.length == 0) {
             return null;
         } else {
             const offsets = touches.map((e) => e.offset);
             const minOffset = Math.min(...offsets);
-            return touches.find((e) => e.offset === minOffset);
+            return touches.find((e) => e.offset == minOffset);
         }
     }
 
