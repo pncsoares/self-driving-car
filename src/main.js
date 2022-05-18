@@ -47,7 +47,7 @@ animate();
 function generateCars(n) {
     const cars = [];
 
-    for (let i = 0; i < n; i++) {
+    for (let i = 1; i <= n; i++) {
         const car = new Car(road.getLaneCenter(1), 100, 30, 50, 'AI');
         cars.push(car);
     }
