@@ -74,3 +74,18 @@ function getRandomColor() {
     const hue = 290 + Math.random() * 260;
     return `hsl(${hue}, 100%, 50%)`;
 }
+
+async function loadJSON(callback) {
+    var xmlRequest = new XMLHttpRequest();
+    xmlRequest.overrideMimeType('application/json');
+    xmlRequest.open('GET', '../data/best-brain.json', false);
+
+    xmlRequest.onreadystatechange = () => {
+        if (xmlRequest.readyState == 4 && xmlRequest.status == '200') {
+            // Required use of an anonymous callback as .open will NOT return a value but simply returns undefined in asynchronous mode
+            callback(xmlRequest.responseText);
+        }
+    };
+
+    xmlRequest.send(null);
+}

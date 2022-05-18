@@ -4,3 +4,6 @@ coverage
 
 # Ignore Markdown files:
 *.md
+
+# Json files:
+*.json
